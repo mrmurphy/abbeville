@@ -2,6 +2,8 @@
 
 A large manual index of equity court records in Abbeville, USA created by Kristen Downey Randle.
 
+Readable here: https://mrmurphy.github.io/abbeville
+
 - Kristen's original HTML page is included in this repository as `old.html`
 - An updated page with a searchable HTML table is in `index.html` and hosted on GitHub pages
 - A SQLite database with this information is stored in the repository as `complaints.db`
