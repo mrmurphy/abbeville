@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complaints Table</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2em;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        width: 100%;
+        border: 1px solid #e0e0e0;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      th {
+        background-color: #f0f0f0;
+        color: #777;
+        border-bottom: 2px solid #e0e0e0;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      input[type="search"] {
+        margin-bottom: 1rem;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("table").DataTable({
+          pageLength: 10,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Abbeville Court Records</h1>
+    <p>
+      Abbeville, South Carolina USA Equity Court Records and Abstracts. Indexed
+      manually by Kristen Downey Randle. Copyright Kristen Randle. Usage granted
+      only for personal genealogical research. Not to be productized or sold.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name of complainer</th>
+          <th>Name of complained against</th>
+          <th>Box number</th>
+          <th>Pack number</th>
+          <th>Year</th>
+          <th>Type of document</th>
+          <th>Abstract of contents</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+          <td>{{ row[6] }}</td>
+          <td>{{ row[7] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <!-- counter -->
+    <p></p>
+    <center>
+      <!-- Start of StatCounter Code -->
+      <script type="text/javascript" language="javascript">
+        var sc_project = 448131;
+        var sc_partition = 2;
+      </script>
+      <script
+        type="text/javascript"
+        language="javascript"
+        src="http://www.statcounter.com/counter/counter.js"
+      ></script>
+      <noscript
+        ><a
+          href="http://www.statcounter.com/free_hit_counter.html"
+          target="_blank"
+          ><img
+            src="http://c3.statcounter.com/counter.php?sc_project=448131&amp;java=0"
+            alt="counter"
+            border="0"
+        /></a>
+      </noscript>
+      <!-- End of StatCounter Code -->
+    </center>
+  </body>
+</html>
